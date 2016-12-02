@@ -1,15 +1,59 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C53a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <development version="7000" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="zrL-2z-2Rn">
+            <objects>
+                <viewController id="A3Q-ce-WI9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JHC-2C-eHu"/>
+                        <viewControllerLayoutGuide type="bottom" id="A2u-YD-AZ9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="veu-Xj-UjI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kz5-h3-Fhm">
+                                <rect key="frame" x="21" y="120" width="332" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v2o-0c-8sE">
+                                <rect key="frame" x="21" y="199" width="332" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azj-UH-RC0">
+                                <rect key="frame" x="168" y="279" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m32-m7-wdL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="-657.12143928035982"/>
+        </scene>
+        <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="shoppoloco" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="shoppoloco" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,22 +62,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4n-0O-R1z">
-                                <rect key="frame" x="56" y="142" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="um5-TV-Wlt">
+                                <rect key="frame" x="30" y="300" width="314" height="67"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="dJC-VU-1k6"/>
+                                </constraints>
+                                <state key="normal" title="Start your smart shopping list"/>
+                                <connections>
+                                    <action selector="startRegister:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vby-ew-Se5"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wE-Sr-iBi">
-                                <rect key="frame" x="249" y="422" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Klx-IM-lfK">
+                                <rect key="frame" x="122" y="75" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="VyM-TQ-NYM"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WS4-Ec-uKB">
+                                <rect key="frame" x="144" y="381" width="200" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="I already have a shopoloco account"/>
+                                <connections>
+                                    <action selector="startLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d8t-QR-bSE"/>
+                                </connections>
+                            </button>
+
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WS4-Ec-uKB" firstAttribute="top" secondItem="um5-TV-Wlt" secondAttribute="bottom" constant="14" id="497-WI-qsp"/>
+                            <constraint firstItem="um5-TV-Wlt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7kA-Bv-4wv"/>
+                            <constraint firstItem="Klx-IM-lfK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8ao-Xv-xYx"/>
+                            <constraint firstItem="um5-TV-Wlt" firstAttribute="centerX" secondItem="Klx-IM-lfK" secondAttribute="centerX" id="CFt-QL-ACB"/>
+                            <constraint firstItem="Klx-IM-lfK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FA4-36-yiE"/>
+                            <constraint firstItem="um5-TV-Wlt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rao-6o-JlC"/>
+                            <constraint firstItem="Klx-IM-lfK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="bUl-ah-Xnl"/>
+                            <constraint firstItem="um5-TV-Wlt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cvc-mB-21C"/>
+                            <constraint firstItem="um5-TV-Wlt" firstAttribute="trailing" secondItem="WS4-Ec-uKB" secondAttribute="trailing" id="d4X-0Q-7WT"/>
+                            <constraint firstItem="um5-TV-Wlt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nll-uH-wUj"/>
+                            <constraint firstItem="um5-TV-Wlt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="14" id="omb-ks-vWI"/>
+                            <constraint firstItem="um5-TV-Wlt" firstAttribute="top" secondItem="Klx-IM-lfK" secondAttribute="bottom" constant="95" id="qff-4Y-4cs"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="tf8-xh-Yiz">
+            <objects>
+                <tableViewController id="VYu-Mw-DFh" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="cw3-GD-7Bu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShoppingListCell" id="nQ7-E1-9yV">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nQ7-E1-9yV" id="Yix-ga-Fh1">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VYu-Mw-DFh" id="ywF-mB-Cbp"/>
+                            <outlet property="delegate" destination="VYu-Mw-DFh" id="X63-Ok-uWS"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sFJ-gq-o6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="37"/>
         </scene>
     </scenes>
 </document>
